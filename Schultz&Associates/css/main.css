@@ -1,0 +1,395 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*font styles*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Qwigley);
+
+body {
+	font-family:'Open Sans', helvetica, sans-serif;
+	font-weight:300;
+	font-size:16px;
+	line-height:24px;
+	text-align: center;
+	position:relative;
+	background: #272727 url(../images/pageBG@2x.jpg) no-repeat top center fixed;
+	background-size:cover;
+	-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  overflow-x:hidden;
+}
+
+p {
+	font-size:1em;
+	color:#ebebeb;
+	line-height:1.5em;/*24(1.5)=36*/
+	font-style:italic;
+	font-weight:400;
+}
+h1 {
+	font-size:4.3125em;/*16(X)=69px*/
+	color:#EBEBEB;
+	line-height:1.5em;/*16x=24px*/
+	font-style:italic;
+	font-weight: 700;
+}
+h3 {
+	font-size:2.5em;/*16x=40px*/
+	color:#272727;
+	line-height:1.5em;
+	font-style:italic;
+	font-weight: 700;
+}
+h4 {
+	font-size:2.8125em;/*16x=45px*/
+	color:#272727;
+	line-height:1.5em;
+	font-style:italic;
+	font-weight: 700;
+}
+ /* #contentBG {
+ 	background: #EBEBEB no-repeat;
+ 	width: 100%;
+ 	height: 515px;
+ } */
+section.products_services { /*this is styling the backgound and w/h of the PS section*/
+	width: 100%;
+	background-color: #EBEBEB;
+	height: 614px;
+	margin: 0 auto;
+}
+
+section.products_services p{
+	color:#272727;
+	font-weight:300;
+}
+section .contact_wrapper h3{
+	color:#FDB731;
+}
+h5 {
+	font-family: 'Qwigley', "Brush Script MT", cursive;
+	color: #ebebeb;
+	font-size:2.5em; /*16px(2.5)=40px*/
+}
+a {
+	font-size:.875em; /*16px(.875)=14px*/
+	color:#fdb731;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+header {
+	position: relative;
+	height:660px;
+	overflow: hidden;
+}
+header a#selected {
+	color:#FDB731;
+	text-decoration:underline;
+}
+header a {
+	color:#EBEBEB;
+}
+header article p {
+	width: 700px;
+	margin: 0 auto;
+	font-weight:400;
+	line-height:1.7em;
+}
+
+.all_around_wrapper{ /*multiple class used to control wrapping in all sections*/
+	width:960px;
+   /*height:660px -not needed b/c some sections are different heights*/
+ 	padding-top:60px;
+	margin: 0 auto;
+}
+header nav li {
+	float: left;
+	display:inline-block;
+}
+header nav ul {
+	float: right;
+}
+header nav li a {
+	margin-left:25px;
+}
+header div#logo {
+	float: left;
+	margin-bottom:107px;
+}
+
+header article {
+	clear: both;
+}
+/*
+-----------------------
+div#HeaderBG { 
+	background: #272727 url(../images/HeaderBG.jpg) no-repeat center center fixed;
+ 	-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;	
+	  background-size: cover;
+	  border:2px solid red;
+	  min-width:500px;
+	  height:660px;
+-----------------------------	  
+	  this was the original css for the bg image...but it did not allow the image to be stretched appropiately.  I re-sized the image and added it to the body tag	 
+}*/
+
+/* ----------------
+	Slider Nav
+	---------------
+ */
+
+header .slider {
+	width: 100%;
+	position: absolute; /*allows me to position links exactly where i want in the Div (Header)*/
+	left: auto;
+	right: auto;
+	bottom: 30px;
+	opacity: 0.58;
+}
+header .slider a{
+	width: 20px;
+	height: 20px;
+	display: inline-block; /*allows me to determine width and height its inline by default*/
+	text-indent: -9999%;
+	background-repeat: no-repeat;
+	background-image: url(../images/SpriteSheet.png);
+	margin: 0 2px;
+	cursor: pointer;
+	background-position: -92px 0;
+}
+header .slider a:hover, header .slider a.active-slider {
+	background-repeat: no-repeat;
+	background-position: -50px 0;
+	background-image: url(../images/SpriteSheet.png);
+}
+
+header .slider-arrows {
+	width: 95%;
+	clear: both;
+	position: absolute;
+	padding: 7px;
+	top: 366px;
+	left: 20px;
+	opacity: 0.58;
+}
+header .slider-arrows a.prev_arrow {
+	float: left;
+	width: 38px;
+	height: 60px;
+	display: inline-block;
+	text-indent: -9999%;
+	background-repeat: no-repeat;
+	background-image: url(../images/SpriteSheet.png);
+	cursor: pointer;
+	background-position: 0px 0px;
+}
+header .slider-arrows a.next_arrow {
+	float: right;
+	width: 38px;
+	height: 60px;
+	display: inline-block;
+	text-indent: -9999%;
+	background-repeat: no-repeat;
+	background-image: url(../images/SpriteSheet.png);
+	cursor: pointer;
+	background-position: 0px -70px;
+}
+header .slider-arrows a.prev_arrow:hover {
+	background-image: url(../images/SpriteSheet.png);
+	background-position: 0px -209px;
+}
+header .slider-arrows a.next_arrow:hover {
+	background-image: url(../images/SpriteSheet.png);
+	background-position: 0px -140px;
+}
+
+
+
+.sub-heading { /*targets all sub-heading p tags....*/
+	width:400px;
+	margin: 0 auto;
+}
+ 
+.products_services #product_wrapper{
+	width: 960px;
+	padding: 0 7%; /*somewhat centers the 3 columns divs*/
+	/* 
+	this style cutting off the bottom of the paragraphs	
+	overflow: hidden;
+*/
+}
+
+.products_services #product_wrapper .col {
+	width: 220px;
+	height: 248px;
+	margin-top: 75px;
+	margin-right: 80px;
+	padding: 3px;
+	float:left;
+}
+.products_services #product_wrapper .col.third_product {
+	margin-right:0px;/*gets rid of the inherited 80px right margin*/
+}
+
+
+/* ----------------
+	contact us
+	---------------
+ */
+ 
+ div#contact_usBG {
+	background: url(../images/footerPat.jpg) top left;
+	height: 425px;
+	width: 100%;
+}
+section h5{
+	margin-top: 40px;
+	margin-bottom: 47px;
+}
+/* ----------------
+	contact FORM
+	---------------
+ */
+article.submit_area {}/*style the form fonts*/
+
+form input[type=text]{
+	width: 432px;
+	height: 25px;
+	padding: 5px;
+	border-radius: 7px;
+	background-color: #EBEBEB;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+	line-height: 1em;
+	margin-right: 5px;
+}
+form input[type=submit] {
+	width: 147px;
+	height: 39px;
+	padding: 5px;
+	border-radius: 7px;
+	background-color: #FDB731;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: .9em;
+	line-height: 1em;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+section div.contact_wrapper{
+	position: relative;
+}
+.icons {
+	position: absolute;
+	top: 267px;
+	padding-left: 7%;
+	clear: both;
+	padding-right: 7%;
+	left: 267px;
+}
+
+.icons li {
+	display: inline-block;
+	float: left;
+	margin-right: 40px;
+}
+.icons li a{
+	width:45px;
+	height: 45px;
+	display: block;
+	text-indent: -9999%;
+	cursor: pointer;
+}
+li.facebook a {
+	background: url(../images/SpriteSheet.png) -150px -80px no-repeat;
+}
+li.twitter a {
+	background: url(../images/SpriteSheet.png) -240px -80px no-repeat;
+}
+
+li.googleplus a {
+	background: url(../images/SpriteSheet.png) -329px -80px no-repeat;
+}
+
+li.pinterest a {
+	background: url(../images/SpriteSheet.png) -419px -80px no-repeat;
+}
+
+li.facebook a:hover {
+	background: url(../images/SpriteSheet.png) -150px -140px no-repeat;
+}
+li.twitter a:hover {
+	background: url(../images/SpriteSheet.png) -240px -140px no-repeat;
+}
+
+li.googleplus a:hover {
+	background: url(../images/SpriteSheet.png) -329px -140px no-repeat;
+}
+
+li.pinterest a:hover {
+	background: url(../images/SpriteSheet.png) -419px -140px no-repeat;
+}
+
+
+
+
+/* ----------------
+	footer
+	---------------
+ */
+
+ 
+ 
+div#footerBG {
+	height:141px;
+	width:100%;
+}
+footer p {
+	font-weight:100;
+}
+footer .footer_wrapper{
+	padding-bottom:4px;
+	position:relative;
+	overflow:hidden;
+	margin-bottom:30px;
+}
+article.address {
+	text-align: left;
+	float: left;
+	margin-right: 250px;
+}
+article.links {
+	
+	text-align:left;
+	float: left;
+	margin-right: 159px;
+}
+article.links a{
+	text-align:left;
+	color:#EBEBEB;
+}
+footer div.copyright {
+	position: absolute;
+	float: left;
+	right: 0px;
+	bottom: 6px;
+}
+
+
+/*clearFix*/
+
+.group::after {
+	content:"";
+	display:block;
+	clear:both;
+	/* height:3px;
+	background-color:#fff;  this style was used to see the clearfix in effect*/
+}
